@@ -14,16 +14,13 @@ export default function About() {
             <div className="md:col-span-1 flex justify-center">
               <div className="relative">
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-earth-200">
-                  <Image
-                    src="/Personal_Website/profile_image.png"
-
-                    alt="Profile"
-                    width={224}
-                    height={224}
-                    className="w-full h-full object-cover"
-                    unoptimized
-                    priority
-                  />
+                <Image
+  src="/profile_image.png"
+  alt="Profile"
+  width={224}
+  height={224}
+  unoptimized
+/>
                 </div>
               </div>
             </div>

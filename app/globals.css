@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #faf7f2;
+  color: #2e2416;
+  line-height: 1.6;
+}
+
+/* Components */
+.btn-primary {
+  @apply px-6 py-3 bg-earth-700 text-white rounded-lg font-semibold hover:bg-earth-800 transition-colors duration-300 inline-block;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border-2 border-earth-300 text-earth-800 rounded-lg font-semibold hover:bg-earth-100 transition-colors duration-300 inline-block;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border border-earth-200;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.section {
+  @apply py-16 px-4 md:px-8;
+}
+
+.container-max {
+  @apply max-w-6xl mx-auto;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #8b6d3f;
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3ede3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b08d5a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b6d3f;
+}

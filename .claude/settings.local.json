@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d D:/Claude_Code_Tes/Data_Enginering_Project/**)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(cd:*)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /PID 21280 /F)",
+      "Bash(taskkill /PID 33508 /F)",
+      "Bash(cmd /c \"taskkill /PID 21280 /F & taskkill /PID 33508 /F\")",
+      "Bash(powershell -Command \"Stop-Process -Id 21280, 33508 -Force\")",
+      "Bash(gh api:*)",
+      "Bash(npx next:*)",
+      "Bash(node -e \"require\\(''react-markdown''\\)\")",
+      "Bash(node -e \"require\\(''gray-matter''\\)\")",
+      "Bash(node -e \"require\\(''@tailwindcss/typography''\\)\")",
+      "Bash(node -e \"console.log\\(require\\(''react-markdown/package.json''\\).version\\)\")"
+    ]
+  }
+}

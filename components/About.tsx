@@ -15,7 +15,7 @@ export default function About() {
               <div className="relative">
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-earth-200">
                 <Image
-  src="/profile_image.png"
+ src="/Personal_Website/public/profile_image.png"
   alt="Profile"
   width={224}
   height={224}

@@ -1,4 +1,5 @@
 import { personalInfo, socialLinks } from "@/lib/config";
+import { assetPath } from "@/lib/site";
 
 const githubHandle =
   socialLinks.github.split("/").filter(Boolean).pop() ?? "GitHub";
@@ -59,7 +60,7 @@ export default function Contact() {
             <a href={socialLinks.email} className="px-6 py-3 bg-forest-600 hover:bg-forest-500 text-white rounded-lg font-bold shadow-lg transition-colors inline-block">
               Send me an Email
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-2 border-earth-500 text-white rounded-lg font-bold hover:bg-earth-800 transition-colors inline-block">
+            <a href={assetPath("/resume.pdf")} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-2 border-earth-500 text-white rounded-lg font-bold hover:bg-earth-800 transition-colors inline-block">
               View Resume
             </a>
           </div>

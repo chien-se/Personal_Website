@@ -1,4 +1,5 @@
 import { education, socialLinks } from "@/lib/config";
+import { assetPath } from "@/lib/site";
 
 export default function Resume() {
   const getSchoolLink = (school: string) => {
@@ -6,7 +7,7 @@ export default function Resume() {
       return "https://lynnwoodtimes.com/2024/06/14/everett-community-college/";
     }
     if (school.includes("University of Washington")) {
-      return "/UWunofficialtranscript.pdf";
+      return assetPath("/UWUnofficialTranscript.pdf");
     }
     return null;
   };
@@ -58,7 +59,7 @@ export default function Resume() {
             View my complete resume or connect on LinkedIn
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href={assetPath("/resume.pdf")} target="_blank" rel="noopener noreferrer" className="btn-primary">
               View Resume
             </a>
             <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="btn-secondary">

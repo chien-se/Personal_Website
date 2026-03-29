@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { personalInfo } from "@/lib/config";
+import { assetPath } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: `${personalInfo.name} | Portfolio`,
   description: personalInfo.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: assetPath("/favicon.ico"),
   },
 };
 

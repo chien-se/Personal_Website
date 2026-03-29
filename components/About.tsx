@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { assetPath } from "@/lib/site";
+
 export default function About() {
   return (
     <section id="about" className="section bg-white py-20">
@@ -7,14 +10,18 @@ export default function About() {
         {/* Profile Section */}
         <div className="relative mb-20">
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-            {/* Profile Image */}
+            {/* Profile Image — public/profile_image.png; next/image respects basePath for GitHub Pages */}
             <div className="md:col-span-1 flex justify-center">
               <div className="relative">
                 <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-lg border-2 border-earth-200">
-                  <img
-                    src="/images/profile_image.png"
+                  <Image
+                    src={assetPath("/profile_image.png")}
                     alt="Profile"
+                    width={224}
+                    height={224}
                     className="w-full h-full object-cover"
+                    unoptimized
+                    priority
                   />
                 </div>
               </div>

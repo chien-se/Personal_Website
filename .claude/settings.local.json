@@ -16,7 +16,9 @@
       "Bash(node -e \"require\\(''react-markdown''\\)\")",
       "Bash(node -e \"require\\(''gray-matter''\\)\")",
       "Bash(node -e \"require\\(''@tailwindcss/typography''\\)\")",
-      "Bash(node -e \"console.log\\(require\\(''react-markdown/package.json''\\).version\\)\")"
+      "Bash(node -e \"console.log\\(require\\(''react-markdown/package.json''\\).version\\)\")",
+      "Bash(gh auth *)",
+      "Bash(git add *)"
     ]
   }
 }

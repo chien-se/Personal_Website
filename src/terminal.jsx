@@ -234,12 +234,12 @@ function BlogReader({ post, onClose }) {
 }
 
 function RecruiterForm({ email, variant, greeting }) {
-  const [form, setForm] = useStateT({ name: "", company: "", role: "", msg: "" });
+  const [form, setForm] = useStateT({ name: "", company: "", msg: "" });
   const [sent, setSent] = useStateT(false);
   const submit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`[Portfolio] ${form.role || "Opportunity"} from ${form.company || form.name}`);
-    const body = encodeURIComponent(`${form.msg}\n\n— ${form.name}${form.company ? ` · ${form.company}` : ""}`);
+    const subject = encodeURIComponent(`Opportunity from ${form.company || form.name}`);
+    const body = encodeURIComponent(`${form.msg}\n\n-- ${form.name}${form.company ? ` | ${form.company}` : ""}`);
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     setSent(true);
   };
@@ -252,7 +252,6 @@ function RecruiterForm({ email, variant, greeting }) {
       </div>
       <label>Your name<input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} /></label>
       <label>Company<input value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} /></label>
-      <label>Role<input value={form.role} onChange={e => setForm({ ...form, role: e.target.value })} placeholder="e.g. Summer '26 SWE Intern" /></label>
       <label>Message<textarea required rows={3} value={form.msg} onChange={e => setForm({ ...form, msg: e.target.value })} placeholder="type your message here" /></label>
       <button type="submit">{sent ? "Thanks — opening mail…" : "Send it"}</button>
     </form>
